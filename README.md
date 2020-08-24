@@ -18,9 +18,7 @@
 import nebular
 
 model = nebular.nebular(10000,20,np.arange(2000,25000,1.))
-
-  <p align="middle">
-     <img src="images/model_spec.png"  height="450" />
-  </p>
 ```
-
+  <p align="middle">
+     <img src="nebular_test.png"  height="450" />
+  </p>
