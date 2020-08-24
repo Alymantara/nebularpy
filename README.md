@@ -10,14 +10,29 @@
   ```
   python setup.py install
   ```
+ ##  Section 1:  Parameters
 
+ ##  Section 2:  Usage
 
- ##  Section 1:  Usage
-
-```
+```python
 import nebular
+import numpy as np
+import matplotlib.pyplot as plt
 
-model = nebular.nebular(10000,20,np.arange(2000,25000,1.))
+x = np.arange(2000,25000,1.)
+model = nebular.nebular(10000,20,x)
+```
+Now, plotting the output
+```python
+fig = plt.figure(figsize=(12,6))
+
+plt.plot(model['wave'],model['flux'],color='b')
+
+plt.yscale('log')
+plt.xlim(2000,25000)
+plt.xlabel(r"Wavlength / $\AA$")
+plt.ylabel(r"Flux / erg s$^{-1}$ cm$^{-2}$ $\AA^{-1}$")
+plt.tight_layout()
 ```
   <p align="middle">
      <img src="nebular_test.png"  height="450" />
